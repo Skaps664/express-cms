@@ -37,6 +37,15 @@ const homePageContent = {
       ],
     },
     {
+      name: 'featuredProductsHeading',
+      title: 'Featured Products Heading',
+      type: 'object',
+      fields: [
+        { name: 'title', title: 'Title', type: 'string' },
+        { name: 'subtext', title: 'Sub Text', type: 'string' },
+      ],
+    },
+    {
       name: 'newArrivalsHeading',
       title: 'New Arrivals Heading',
       type: 'object',
