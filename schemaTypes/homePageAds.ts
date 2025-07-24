@@ -4,43 +4,154 @@ const homePageAds = {
   type: 'document',
   fields: [
     {
-      name: 'smallAddBanner1',
-      title: 'Small Ad Banner 1',
+      name: 'mainSolarAd',
+      title: 'Main Solar Advertisement',
       type: 'object',
       fields: [
-        { name: 'upperLeftText', title: 'Upper Left Text', type: 'string' },
-        { name: 'lowerLeftText', title: 'Lower Left Text', type: 'string' },
-        { name: 'buttonText', title: 'Button Text', type: 'string' },
-        { name: 'buttonLink', title: 'Button Link', type: 'url' },
-      ],
+        {
+          name: 'offerBadge',
+          title: 'Offer Badge Text',
+          type: 'string',
+          initialValue: 'LIMITED OFFER'
+        },
+        {
+          name: 'headline',
+          title: 'Main Headline',
+          type: 'string',
+          initialValue: 'Go Solar & Save'
+        },
+        {
+          name: 'subHeadline',
+          title: 'Sub Headline',
+          type: 'string',
+          initialValue: 'Up to 90% on Bills'
+        },
+        {
+          name: 'description',
+          title: 'Description',
+          type: 'string',
+          initialValue: 'Let the Sun Lead the Way to Energy Independence'
+        },
+        {
+          name: 'benefits',
+          title: 'Benefits',
+          type: 'array',
+          of: [{
+            type: 'object',
+            fields: [
+              { name: 'text', type: 'string' },
+              { name: 'icon', type: 'string' }
+            ]
+          }],
+          initialValue: [
+            { text: 'Clean Energy', icon: 'sun' },
+            { text: '24/7 Power', icon: 'battery' },
+            { text: 'Home Value +15%', icon: 'home' },
+            { text: 'Govt. Incentives', icon: 'graph' }
+          ]
+        },
+        {
+          name: 'pricing',
+          type: 'object',
+          fields: [
+            { name: 'startingPrice', type: 'number' },
+            { name: 'monthlyPrice', type: 'number' },
+            { name: 'priceText', type: 'string' }
+          ]
+        },
+        {
+          name: 'cta',
+          type: 'object',
+          fields: [
+            { name: 'phoneNumber', type: 'string' },
+            { name: 'consultationText', type: 'string' },
+            { name: 'consultationLink', type: 'url' }
+          ]
+        },
+        {
+          name: 'urgencyText',
+          type: 'string',
+          initialValue: 'Offer expires soon • Limited slots available'
+        },
+        {
+          name: 'mainImage',
+          title: 'Main Image',
+          type: 'image',
+          options: {
+            hotspot: true
+          }
+        },
+        {
+          name: 'testimonial',
+          type: 'object',
+          fields: [
+            { name: 'text', type: 'string' },
+            { name: 'rating', type: 'number' }
+          ]
+        },
+        {
+          name: 'savingsBadge',
+          type: 'object',
+          fields: [
+            { name: 'percentage', type: 'number' },
+            { name: 'text', type: 'string' }
+          ]
+        }
+      ]
     },
     {
-      name: 'largeAddBanner2',
-      title: 'Large Ad Banner 2',
+      name: 'miniTopAd',
+      title: 'Mini Top Advertisement',
       type: 'object',
       fields: [
-        { name: 'upperLeftText', title: 'Upper Left Text', type: 'string' },
-        { name: 'middleLeftText', title: 'Middle Left Text', type: 'text' },
-        { name: 'lowerLeftText', title: 'Lower Left Text', type: 'string' },
-        { name: 'noteText', title: 'Note or Disclaimer Text', type: 'string' },
-        { name: 'buttonText', title: 'Button Text', type: 'string' },
-        { name: 'buttonLink', title: 'Button Link', type: 'url' },
-        { name: 'upperRightText', title: 'Upper Right Text (e.g., badge or savings)', type: 'string' },
-        { name: 'rightSideImage', title: 'Right Side Image', type: 'image' },
-      ],
+        {
+          name: 'headline',
+          type: 'string',
+          initialValue: 'Ready to Go Solar?'
+        },
+        {
+          name: 'description',
+          type: 'string',
+          initialValue: 'Schedule a free consultation with our solar experts today'
+        },
+        {
+          name: 'buttonText',
+          type: 'string',
+          initialValue: 'Book Consultation'
+        },
+        {
+          name: 'buttonLink',
+          type: 'url'
+        }
+      ]
     },
     {
-      name: 'smallAddBanner3',
-      title: 'Small Ad Banner 3',
+      name: 'miniBottomAd',
+      title: 'Mini Bottom Advertisement',
       type: 'object',
       fields: [
-        { name: 'upperLeftText', title: 'Upper Left Text', type: 'string' },
-        { name: 'lowerLeftText', title: 'Lower Left Text', type: 'string' },
-        { name: 'buttonText', title: 'Button Text', type: 'string' },
-        { name: 'buttonLink', title: 'Button Link', type: 'url' },
-      ],
-    },
-  ],
+        {
+          name: 'headline',
+          type: 'string',
+          initialValue: 'Ready to Go Solar?'
+        },
+        {
+          name: 'description',
+          type: 'string',
+          initialValue: 'Schedule a free consultation with our solar experts today'
+        },
+        {
+          name: 'buttonText',
+          type: 'string',
+          initialValue: 'Book Consultation'
+        },
+        {
+          name: 'buttonLink',
+          type: 'url'
+        }
+      ]
+    }
+  ]
 }
 
 export default homePageAds
